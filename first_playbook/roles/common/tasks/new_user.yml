@@ -1,0 +1,20 @@
+- name: create non-root group
+  become: true
+  group:
+    name: "deployers"
+    state: present
+
+- name: create non-root user
+  become: true
+  user:
+    name: "deployer"
+    group: "deployers"
+    shell: "/bin/bash"
+    state: present
+
+- name: add authorized_key to non-root user
+  become: true
+  authorized_key:
+    user: deployer
+    state: present
+    key: "{{ lookup('file', '/Users/zkan/Labs/hello-ansible/first_playbook/first_playbook.pub') }}"
