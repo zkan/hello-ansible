@@ -1,0 +1,13 @@
+[init_config]
+35.240.192.58 ansible_python_interpreter=/usr/bin/python3 ansible_ssh_user=kan
+35.187.220.22 ansible_python_interpreter=/usr/bin/python3 ansible_ssh_user=kan
+
+[common]
+35.240.192.58 ansible_python_interpreter=/usr/bin/python3 ansible_ssh_user=kan
+35.187.220.22 ansible_python_interpreter=/usr/bin/python3 ansible_ssh_user=kan
+
+[webserver]
+35.240.192.58 ansible_python_interpreter=/usr/bin/python3 ansible_ssh_user=kan
+
+[database]
+35.187.220.22 ansible_python_interpreter=/usr/bin/python3 ansible_ssh_user=kan

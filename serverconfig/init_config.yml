@@ -1,0 +1,5 @@
+- name: apply initial config to server
+  hosts: init_config
+  user: root
+  roles:
+    - init_config
