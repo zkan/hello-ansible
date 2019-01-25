@@ -1,2 +1,2 @@
 [common]
-34.80.213.130 ansible_python_interpreter=/usr/bin/python3 ansible_ssh_user=kan
+34.80.158.96 ansible_python_interpreter=/usr/bin/python3 ansible_ssh_user=kan
