@@ -1,0 +1,16 @@
+- name: ensure postgresql database packages are installed
+  apt:
+    name: ['postgresql', 'libpq-dev', 'python3-psycopg2', 'postgresql-client', 'postgresql-client-common']
+  become: true
+
+- name: create database instance
+  postgresql_db: name={{ db_name }}
+  become: true
+  become_user: postgres
+
+- name: configure separate PostgreSQL user
+  postgresql_user: db={{ db_name }} name={{ db_user }}
+                   password={{ db_password }} priv=ALL
+                   role_attr_flags=NOSUPERUSER
+  become: true
+  become_user: postgres

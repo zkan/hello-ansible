@@ -1,4 +1,8 @@
-deploy_user: deployer
-deploy_group: deployers
+deploy_user: "deployer"
+deploy_group: "deployers"
 ssh_dir: "/Users/zkan/Labs/hello-ansible/serverconfig/"
 ssh_key_name: "serverconfig"
+
+db_name: "serverconfig"
+db_user: "{{ deploy_user }}"
+db_password: "Pronto123"
