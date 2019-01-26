@@ -1,0 +1,7 @@
+- name: enable HTTP access
+  ufw: rule=allow port=80
+  become: true
+
+- name: enable HTTPS access
+  ufw: rule=allow port=443
+  become: true

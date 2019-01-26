@@ -1,5 +1,0 @@
-- name: apply webserver config to server
-  hosts: webserver
-  user: deployer
-  roles:
-    - common
