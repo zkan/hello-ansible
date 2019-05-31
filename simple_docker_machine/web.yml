@@ -1,0 +1,6 @@
+- name: set up web server
+  hosts: web
+  user: rocket
+  roles:
+    - common
+    - nginx
